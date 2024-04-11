@@ -42,7 +42,7 @@ public class ClimaController {
         climaService.excluir(id);
     }
 
-    @GetMapping("/buscarPorNome/{nome}")
+    @GetMapping("/buscarPorPais/{pais}")
     public List<ClimaEntity> buscarPorPais(@PathVariable String pais) {
         return climaService.buscarPorPais(pais);
     }
@@ -54,15 +54,15 @@ public class ClimaController {
     //http://localhost:8080/users/buscarPorNomeEEmail?nome=joao&email=joao@gmail.com usar para achar email
 
     @GetMapping("/buscarPorPaisEData")
-    public List<ClimaEntity> buscarUsuariosPorPaisEData(@RequestParam("pais") String nome,@RequestParam("data") String email) {
-        return climaService.buscarPorPaisEData(nome, email);
+    public List<ClimaEntity> buscarUsuariosPorPaisEData(@RequestParam("pais") String pais,@RequestParam("data") String data) {
+        return climaService.buscarPorPaisEData(pais, data);
     }
     @GetMapping("/buscarPorPaisQueComecaCom/{prefixo}")
-    public List<ClimaEntity> buscarUsuariosPorNomeQueComecaCom(@PathVariable String prefixo) {
+    public List<ClimaEntity> buscarPorPaisQueComecaCom(@PathVariable String prefixo) {
         return climaService.buscarPorPaisQueComecaCom(prefixo);
     }
     @GetMapping("/buscarPorPaisQueContem/{contem}")
-    public List<ClimaEntity> buscarPaisPorNomeQueContem(@PathVariable String contem) {
+    public List<ClimaEntity> buscarPaisQueContem(@PathVariable String contem) {
         return climaService.buscarPorPaisQueContem(contem);
     }
 }
