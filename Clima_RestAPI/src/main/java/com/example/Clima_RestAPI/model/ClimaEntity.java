@@ -22,11 +22,9 @@ public class ClimaEntity {
     public void setId(String id) {this.id = id; }
 
     public String getPais(){return pais; }
-
     public void setPais(String pais) { this.pais = pais; }
 
     public String getData() {return data; }
-
     public void setData(String data) {this.data = data; }
 
     public String getTexto() {return texto;}
